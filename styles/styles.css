@@ -1,0 +1,1674 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    color: var(--color-principal, #3e043c);
+}
+
+
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 500px 650x 650px 400px;
+}
+
+
+
+/*--------------------HEADER-------------------*/
+
+#header{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    height: 65px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+/*--------------------logo-------------------*/
+
+#header  a{
+    margin-left: 45px;
+}
+
+/*--------------------nav-------------------*/
+
+
+#header .header__navegacion{
+    width: 86%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0px 20px;
+}
+
+#header .header__navegacion .boton__menu{
+    display: none;
+}
+
+#header .header__navegacion ul{
+    list-style: none;
+    display: flex;
+}
+
+#header .header__navegacion a{
+    text-decoration: none;
+    margin: 0px 8px;
+    padding: 10px 5px;
+    color: white;
+}
+
+
+
+
+
+/*-------------------------MAIN DEL INDEX-----------------------------------------------------*/
+
+/*--------------------PORTADA-------------------*/
+
+#portada{
+    grid-row: 1;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#portada article{
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#portada article .portada__img{
+    width: 140%;
+}
+
+/*--------------------contenedor de texto de portada-------------------*/
+
+
+#portada .portada__texto{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(62, 4, 60, 70%);
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#portada .portada__texto .portada__titulo{
+    font-size: 75px;
+    color: white;
+    padding: 0px 15px;
+    margin: 15px 0px 0px 45px;
+} 
+
+#portada .portada__texto span{
+    font-size: 20px;
+    color: white; 
+    padding: 0px 15px;
+    margin: 15px 0px 0px 45px;
+}
+
+#portada .portada__texto .portada__enlace{
+    margin: 15px 0px 0px 55px;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    background-color: #3e043c;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+/*--------------------OPINIONES-------------------*/
+
+#opiniones{  
+    grid-row: 2;
+    height: 650px;
+}
+
+#opiniones article{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 10% 90%;
+    width: 100%;
+    height: 100%;
+    background-color: #3e043c;
+    align-items: center;
+    justify-items: center;
+}
+
+/*--------------------h2 titulo-------------------*/
+
+#opiniones .opiniones__titulo{
+    grid-column: 1/5;
+    grid-row: 1;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+/*--------------------contenedor de opiniones-------------------*/
+
+
+
+
+#opiniones  .opiniones__comentarios__uno{
+    grid-column: 1;
+    grid-row: 2;
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 5%) ;
+    border-radius: 20px;
+}
+
+#opiniones  article .container__img__nombre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#opiniones .opiniones__comentarios__dos{
+    grid-column: 2;
+    grid-row: 2;
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 5%) ;
+    border-radius: 20px;
+}
+
+#opiniones .opiniones__comentarios__tres{
+    grid-column: 3;
+    grid-row: 2;
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 5%) ;
+    border-radius: 20px;
+}
+
+#opiniones .opiniones__comentarios__cuatro{
+    grid-column: 4;
+    grid-row: 2;
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 5%) ;
+    border-radius: 20px;
+}
+
+#opiniones div .container__img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#opiniones  div .avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#opiniones  div span{
+    color: #3e043c;
+    background-color: white;
+    margin: 30px 0px ;
+    font-size: 20px;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+
+#opiniones  div p{
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    padding: 0px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/*--------------------contacto-------------------*/
+
+#contacto{
+    grid-row: 3;
+    width: 100%;
+    height: 650px;
+}
+
+#contacto article{
+    height: 650px;
+    
+}
+
+#contacto  h2{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin: 20px;
+}
+
+#contacto .contacto__formulario{
+    display: flex;
+    align-items: center;
+}
+
+#contacto .contacto__formulario div{
+    width: 50%;
+    margin: 6px;
+    height: 100%;
+}
+
+#contacto .contacto__formulario div img{
+    width: 100%;
+}
+
+#contacto .contacto__formulario form{
+    width: 50%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 15px;
+    margin-right: 25px;
+    background-color: #3e043c;
+    border-radius: 15px; 
+}
+
+#contacto .contacto__formulario form label{
+    color: white;
+    font-size: 13px;
+}
+
+#contacto .contacto__formulario .entrada{
+    height: 35px;
+    padding: 0px 10px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+}
+
+#contacto .contacto__formulario textarea{
+    padding: 10px 10px;
+    border-radius: 6px;
+    min-width: 100%;
+    min-height: 40%;
+    outline: none;
+    border: none;
+}
+
+#contacto .contacto__formulario form .form__boton{
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+}
+
+/*-------------------------MAIN CELULARES_Y_TABLETS----------------------------------------------*/
+
+#container__items{
+    grid-row: 2/5;
+    height: 1300px;
+    padding-top: 10px;
+    background-color: #3e043c;
+
+}
+
+
+#container__items article{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#container__items h2{
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin: 15px;
+}
+
+#container__items .container{
+    display: flex;
+    width: 45%;
+    height: 200px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: white;
+    align-items: center;
+}
+
+#container__items .container .container__img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container__items .container .container__img img{
+    height: 60%;
+}
+
+#container__items .container .container_text{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#container__items .container .container_text .precio{
+    font-size: 25px;
+}
+
+#container__items .container .container_text .envio{
+    color: white;
+    background-color: #3e043c;
+    width: 100px;
+    padding: 2px;
+    margin: 7px 0px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#container__items .container .container_text .producto{
+    font-size: 15px;
+}
+
+
+/*-------------------------MAIN ACCESORIOS----------------------------------------------*/
+
+/*auriculares*/
+
+#container__items__auriculares{
+    grid-row: 2/5;
+    height: 1300px;
+    background-color: #3e043c;
+}
+
+
+#container__items__auriculares article{
+    padding-top: 10px;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#container__items__auricularess h2{
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin: 15px;
+}
+
+#container__items__auriculares article .container{
+    display: flex;
+    width: 45%;
+    height: 200px;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: white;
+    align-items: center;
+    
+}
+
+#container__items__auriculares .container .container__img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container__items__auriculares .container .container__img img{
+    width: 50%;
+}
+
+#container__items__auriculares .container .container_text{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#container__items__auriculares .container .container_text .precio{
+    font-size: 25px;
+}
+
+#container__items__auriculares .container .container_text .envio{
+    color: white;
+    background-color: #3e043c;
+    width: 100px;
+    padding: 2px;
+    margin: 7px 0px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#container__items__auricularess .container .container_text .producto{
+    font-size: 15px;
+}
+
+/*cargadores
+
+#container__items__cargadores{
+    grid-row: 4;
+    height: 650px;
+}
+
+
+#container__items__cargadores article{
+    background-color: #3e043c;
+    width: 100%;
+    height: 650px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#container__items__cargadores h2{
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+#container__items__cargadores article .container{
+    display: flex;
+    width: 45%;
+    height: 200px;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: white;
+    align-items: center;
+    
+}
+
+#container__items__cargadores .container .container__img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container__items__cargadores .container .container__img img{
+    width: 50%;
+}
+
+#container__items__cargadores .container .container_text{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#container__items__cargadores .container .container_text .precio{
+    font-size: 25px;
+}
+
+#container__items__cargadores .container .container_text .envio{
+    color: white;
+    background-color: #3e043c;
+    width: 100px;
+    padding: 2px;
+    margin: 7px 0px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#container__items__cargadores .container .container_text .producto{
+    font-size: 15px;
+}*/
+
+
+
+
+/*-------------------------MAIN ¿COMO COMPRAR?----------------------------------------------*/
+
+#comprar{
+    grid-row: 2/5;
+    height: 1300px;
+}
+
+#comprar article{
+    padding: 10px;
+    height: 1300px;
+    display: flex;
+    align-items: center;
+}
+
+#comprar h2{
+    text-align: center;
+}
+
+#comprar .compras__contenedor{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#comprar .compras__contenedor .comprar__pasos{
+    display: flex;
+    height: 210px;
+    width: 95%;
+    padding: 10px;
+}
+
+/*contenedor de imagen*/
+
+#comprar .compras__contenedor .comprar__pasos .comprar__pasos_img{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#comprar .compras__contenedor .comprar__pasos .comprar__pasos_img img{
+    height: 100%;
+}
+
+/*contenedor de texto*/
+
+#comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt{
+    width: 60%;
+    background-color: #3e043c;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt .titulo{
+    color: white;
+    font-size: 2vw;
+    
+}
+
+#comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt .titulo .titulo__paso{
+    font-size: 3vw;
+    background-color: white;
+    color: #3e043c;
+    border-radius: 4px;
+    padding: 2px 10px;
+}
+
+#comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt .explicacion{
+    color: white;
+    padding: 20px;
+}
+
+
+/*-------------------------MAIN SOBRE NOSOTROS----------------------------------------------*/
+
+#inicios{
+    width: 100%;
+    grid-row: 2;
+    height: 650px;
+}
+
+#inicios article{
+    background-color: #3e043c;
+    padding: 50px;
+    width: 100%;
+    height: 650px;
+}
+
+#inicios h2{
+    text-align: center;
+    color: white;
+}
+
+#inicios .inicios__parrafo{
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/*que te ofrecemos*/
+
+
+
+#ofrecemos{
+    height: 650px;
+    grid-row: 3;
+    padding: 40px 0px;
+    background-color: #3e043c;
+}
+
+#ofrecemos article{
+    height: 650px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3e043c;
+}
+
+#ofrecemos h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#ofrecemos .container{
+    display: flex;
+    width: 100%;
+    
+    
+}
+
+#ofrecemos .ofrecemos__contenedor{
+    width: 25%;
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#ofrecemos .ofrecemos__contenedor_img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#ofrecemos .ofrecemos__contenedor_img img{
+    width: 40%;
+    margin: 15px;
+}
+
+#ofrecemos .ofrecemos__contenedor .ofrecemos__texto{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+}
+
+#ofrecemos .ofrecemos__contenedor .ofrecemos__texto .titulo{
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+}
+
+#ofrecemos .ofrecemos__contenedor .ofrecemos__texto .parrafo{
+    color: white;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+#ofrecemos h2{
+    text-align: center;
+    color: white;
+}
+
+#ofrecemos .inicios__parrafo{
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+
+/*--------------------FOOTER-------------------*/
+
+#pie{
+    grid-row: 4;
+    background-color: #3e043c;
+    display: flex;
+    height: 400px;
+    width: 100%;
+    padding: 10px;
+}
+
+#pie .titulo{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#pie .informacion{
+    color: white;
+    font-size: 12px;
+}
+
+/*--------------------FOOTER__DERECHO-------------------*/
+
+
+#pie .pie__izquierdo{
+    width: 33.33%;
+    height: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*--------------------FOOTER__CENTRO-------------------*/
+
+#pie .pie__centro{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    width: 33.33%;
+    height: 100%;
+    align-items: center;
+}
+
+#pie .pie__centro .pie__centro__redes{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#pie .pie__centro .pie__centro__redes .container__redes{
+    display: flex;
+    padding-bottom: 20px;
+    
+}
+
+#pie .pie__centro .pie__centro__redes .container__redes a{
+    color: white;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+#pie .pie__centro .pie__centro__secciones{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#pie .pie__centro .pie__centro__secciones .container__seccion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 90%;
+    margin-top: 15px;
+}
+
+#pie .pie__centro .pie__centro__secciones .container__seccion a{
+    color:  white;
+    text-decoration: none;
+    font-size: 12px;
+
+}
+
+
+/*--------------------FOOTER__IZQUIERDO-------------------*/
+
+#pie .pie__derecho{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    width: 33.33%;
+    height: 50%;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#pie .pie__derecho form{
+    display: flex;
+    width: 100%;
+}
+
+#pie .pie__derecho form input{
+    width: 70%;
+    height: 25px;
+    padding: 0px 5px;
+}
+
+#pie .pie__derecho form button{
+    width: 30%;
+    height: 25px;
+}
+
+
+/*-------RESPUESTA A CELULARES-------*/
+
+@media screen and (max-width: 600px) {
+
+    body{
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 500px 750px 750px 500px;
+    }
+
+    
+/*--------------------HEADER-------------------*/
+
+#header{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    height: 65px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    
+}
+
+/*--------------------logo-------------------*/
+
+#header a{
+    margin-left: 25px;
+}
+
+/*--------------------nav-------------------*/
+
+
+#header .header__navegacion{
+    width: 86%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#header .header__navegacion .boton__menu{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+#header .header__navegacion .boton__menu span{
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+#header .header__navegacion ul{
+    list-style: none;
+    display: none;
+}
+
+#header .header__navegacion a{
+    text-decoration: none;
+    margin: 0px 8px;
+    padding: 10px 5px;
+    color: white;
+}
+
+
+    /*--------------------PORTADA-------------------*/
+
+#portada{
+    grid-row: 1;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#portada article .portada__img{
+    height: 100%;
+    width: auto;
+}
+
+/*--------------------contenedor de texto de portada-------------------*/
+
+
+#portada .portada__texto{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(62, 4, 60, 70%);
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#portada .portada__texto .portada__titulo{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    padding: 0px 15px;
+    margin: 15px 0px 0px 0px;
+} 
+
+#portada .portada__texto span{
+    font-size: 20px;
+    color: white; 
+    padding: 0px 15px;
+    margin: 15px 0px 0px 0px;
+    text-align: center;
+}
+
+#portada .portada__texto .portada__enlace{
+    margin: 15px 0px 0px 55px;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    background-color: #3e043c;
+    font-size: 20px;
+    border-radius: 15px;
+    margin: 15px 0px 0px 0px;
+}
+
+/*--------------------OPINIONES-------------------*/
+
+#opiniones{  
+    grid-row: 2;
+    height: 750px;
+    width: 100%;
+}
+
+#opiniones article{
+    display: grid;
+    grid-template-rows: 10% repeat(4, 22.5%);
+    width: 100%;
+    height: 750px;
+    background-color: #3e043c;
+}
+
+/*--------------------h2 titulo-------------------*/
+
+#opiniones .opiniones__titulo{
+    grid-row: 1;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+/*--------------------contenedor de opiniones-------------------*/
+
+
+
+
+#opiniones  .opiniones__comentarios__uno{
+    grid-row: 2;
+    grid-column: 1/5;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 5%) ;
+    border-radius: 20px;
+    margin: 0px 10px;
+}
+
+#opiniones .opiniones__comentarios__dos{
+    grid-row: 3;
+    grid-column: 1/5;
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 5%) ;
+    border-radius: 20px;
+    margin: 0px 10px;
+}
+
+#opiniones .opiniones__comentarios__tres{
+    grid-row: 4;
+    grid-column: 1/5;
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 5%) ;
+    border-radius: 20px;
+    margin: 0px 10px;
+}
+
+#opiniones .opiniones__comentarios__cuatro{
+    grid-row: 5;
+    grid-column: 1/5;
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 5%) ;
+    border-radius: 20px;
+    margin: 0px 10px;
+}
+
+#opiniones .container__img__nombre{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#opiniones  .container__img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+#opiniones  div .container__img .avatar{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#opiniones  span{
+    color: #3e043c;
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 0px 10px;
+    border-radius: 5px;
+    width: 100px;
+}
+
+#opiniones p{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    width: 70%;
+    border: 1px solid white;
+}
+
+
+/*--------------------contacto-------------------*/
+
+#contacto{
+    grid-row: 3;
+    width: 100%;
+    height: 750px;
+}
+
+#contacto article{
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#contacto  h2{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin: 20px;
+}
+
+#contacto .contacto__formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+#contacto .contacto__formulario div{
+    display: none;
+    align-items: center;
+}
+
+#contacto .contacto__formulario form{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #3e043c;
+    border-radius: 15px;
+    margin: 0px 5px;
+}
+
+#contacto .contacto__formulario form label{
+    color: white;
+    font-size: 13px;
+}
+
+#contacto .contacto__formulario .entrada{
+    height: 35px;
+    padding: 0px 10px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+}
+
+#contacto .contacto__formulario textarea{
+    padding: 10px 10px;
+    border-radius: 6px;
+    min-width: 100%;
+    min-height: 40%;
+    outline: none;
+    border: none;
+}
+
+#contacto .contacto__formulario form .form__boton{
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+}
+
+/*-------------------------MAIN CELULARES_Y_TABLETS----------------------------------------------*/
+
+#container__items{
+    grid-row: 2/5;
+    height: 1500px;
+    padding: 0;
+    background-color: #3e043c;
+
+}
+
+
+#container__items article{
+    width: 100%;
+    height: 1500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+#container__items h2{
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin: 15px;
+}
+
+#container__items .container{
+    display: flex;
+    width: 95%;
+    height: 140px;
+    margin: 3px;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: white;
+    align-items: center;
+}
+
+#container__items .container .container__img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container__items .container .container__img img{
+    height: 70%;
+}
+
+#container__items .container .container_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+#container__items .container .container_text .precio{
+    font-size: 25px;
+}
+
+#container__items .container .container_text .envio{
+    color: white;
+    background-color: #3e043c;
+    width: 100px;
+    padding: 2px;
+    margin: 7px 0px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#container__items .container .container_text .producto{
+    font-size: 15px;
+}
+
+
+/*-------------------------MAIN ACCESORIOS----------------------------------------------*/
+
+/*auriculares*/
+
+#container__items__auriculares{
+    grid-row: 2/5;
+    height: 1500px;
+    background-color: #3e043c;
+}
+
+
+#container__items__auriculares article{
+    padding-top: 10px;
+    width: 100%;
+    height: 1500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#container__items__auricularess h2{
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin: 15px;
+}
+
+#container__items__auriculares article .container{
+    display: flex;
+    width: 95%;
+    height: 200px;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: white;
+    align-items: center;
+}
+
+#container__items__auriculares .container .container__img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container__items__auriculares .container .container__img img{
+    width: 50%;
+}
+
+#container__items__auriculares .container .container_text{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#container__items__auriculares .container .container_text .precio{
+    font-size: 25px;
+}
+
+#container__items__auriculares .container .container_text .envio{
+    color: white;
+    background-color: #3e043c;
+    width: 100px;
+    padding: 2px;
+    margin: 7px 0px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#container__items__auricularess .container .container_text .producto{
+    font-size: 15px;
+}
+
+
+/*-------------------------MAIN ¿COMO COMPRAR?----------------------------------------------*/
+
+#comprar{
+    grid-row: 2/5;
+    height: 1500px;
+}
+
+#comprar article{
+    padding: 0;
+    height: 1500px;
+    display: flex;
+    align-items: center;
+}
+
+#comprar .compras__contenedor{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 1500px;
+}
+
+#comprar .compras__contenedor .comprar__pasos{
+    display: flex;
+    height: 16.66%;
+    width: 100%;
+}
+
+/*contenedor de imagen*/
+
+#comprar .compras__contenedor .comprar__pasos .comprar__pasos_img{
+    display: none;
+}
+
+#comprar .compras__contenedor .comprar__pasos .comprar__pasos_img img{
+    height: 100%;
+}
+
+/*contenedor de texto*/
+
+#comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt{
+    width: 100%;
+    background-color: #3e043c;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt .titulo{
+    color: white;
+    font-size: 20px;
+    
+}
+
+#comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt .titulo .titulo__paso{
+    font-size: 25px;
+    background-color: white;
+    color: #3e043c;
+    border-radius: 4px;
+    padding: 2px 10px;
+}
+
+#comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt .explicacion{
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
+
+/*--------------------FOOTER-------------------*/
+
+#pie{
+    grid-row: 4;
+    background-color: #3e043c;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid white;
+}
+
+#pie .titulo{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#pie .informacion{
+    color: white;
+    font-size: 12px;
+}
+
+/*--------------------FOOTER__IZQUIERDO-------------------*/
+
+
+#pie .pie__izquierdo{
+    width: 100%;
+    height: 40%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*--------------------FOOTER__CENTRO-------------------*/
+
+#pie .pie__centro{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    height: 40%;
+    align-items: center;
+}
+
+#pie .pie__centro .pie__centro__redes{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#pie .pie__centro .pie__centro__redes .container__redes{
+    display: flex;
+    padding-bottom: 15px;
+    
+}
+
+#pie .pie__centro .pie__centro__redes .container__redes a{
+    color: white;
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+#pie .pie__centro .pie__centro__secciones{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#pie .pie__centro .pie__centro__secciones .container__seccion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 90%;
+    margin-top: 15px;
+}
+
+#pie .pie__centro .pie__centro__secciones .container__seccion a{
+    color:  white;
+    text-decoration: none;
+    font-size: 12px;
+
+}
+
+
+/*--------------------FOOTER__DERECHO-------------------*/
+
+#pie .pie__derecho{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#pie .pie__derecho form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#pie .pie__derecho form input{
+    width:100%;
+    height: 25px;
+    padding: 0px 5px;
+    margin-bottom: 5px;
+}
+
+#pie .pie__derecho form button{
+    width: 100%;
+    height: 25px;
+} 
+
+
+}
+
+
+
+@media screen and (max-width: 1023px){
+    
+    /*--------------------HEADER-------------------*/
+
+#header{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    height: 65px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    
+}
+
+/*--------------------logo-------------------*/
+
+#header a{
+    margin-left: 25px;
+}
+
+/*--------------------nav-------------------*/
+
+
+#header .header__navegacion{
+    width: 86%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#header .header__navegacion .boton__menu{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+#header .header__navegacion .boton__menu span{
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#header .header__navegacion ul{
+    list-style: none;
+    display: none;
+}
+
+#header .header__navegacion a{
+    text-decoration: none;
+    margin: 0px 8px;
+    padding: 10px 5px;
+    color: white;
+}
+
+/* imagen como comprar*/
+
+#comprar .compras__contenedor .comprar__pasos .comprar__pasos_img img{
+    width: auto;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
