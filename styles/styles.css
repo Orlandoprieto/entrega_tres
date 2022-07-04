@@ -13,8 +13,7 @@
 
 body{
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 500px 650x 650px 400px;
+    grid-template-rows: auto 400px;
 }
 
 
@@ -49,6 +48,20 @@ body{
     margin: 0px 20px;
 }
 
+#header .header__navegacion ul li a:visited{
+    border-bottom: 3px solid #ffffff;
+}
+
+#header .header__navegacion ul li a:hover{
+    border-bottom: 3px solid #3e043c;
+}
+
+
+
+
+/*--------------------desplegable, solo para pantallas-------------------*/
+
+
 #header .header__navegacion .boton__menu{
     display: none;
 }
@@ -66,16 +79,15 @@ body{
 }
 
 
+/*--------------------PORTADA (comun a todas la paginas)-------------------*/
 
-
-
-/*-------------------------MAIN DEL INDEX-----------------------------------------------------*/
-
-/*--------------------PORTADA-------------------*/
+main{
+    grid-row: 1;
+}
 
 #portada{
     grid-row: 1;
-    height: 500px;
+    height: 550px;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -115,13 +127,18 @@ body{
     color: white;
     padding: 0px 15px;
     margin: 15px 0px 0px 45px;
+    animation-name: desplazamiento;
+    animation-duration: 2s;
 } 
+
 
 #portada .portada__texto span{
     font-size: 20px;
     color: white; 
     padding: 0px 15px;
     margin: 15px 0px 0px 45px;
+    animation-name: desplazamiento;
+    animation-duration: 2.5s;
 }
 
 #portada .portada__texto .portada__enlace{
@@ -132,43 +149,145 @@ body{
     background-color: #3e043c;
     font-size: 20px;
     border-radius: 15px;
+    animation-name: desplazamiento;
+    animation-duration: 35
+}
+
+@keyframes desplazamiento {
+    0% {transform: translateX(1000px); color: rgb(255, 255, 255, 0%);}
+    50% {color: rgb(255, 255, 255, 0%);}
+    100% {transform: translateX(0px); color: rgb(255, 255, 255, 100%)}
+}
+
+/*-------------------------INDEX.html-----------------------------------------------------*/
+
+#container{
+    width: 100%;
+}
+
+#container article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#container .container__experiencia{
+    width: 95%;
+    height: 300px;
+    display: flex;
+    padding: 5px;
+    margin: 30px 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#container .container__precios{
+    width: 95%;
+    height: 300px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 5px;
+    margin: 30px 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#container .container__seguridad{
+    width: 95%;
+    height: 300px;
+    display: flex;
+    padding: 5px;
+    margin: 30px 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#container article > div:hover{
+    box-shadow: none;
+    transform: scale(0.99);
+}
+
+/*-----container img-----*/
+
+#container .container__img{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container  .container__img img{
+    height: 90%;
+}
+
+/*-----container texto-----*/
+
+#container  .container__text{
+    width: 60%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3e043c;
+    align-self: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0px 30px;
+}
+
+#container .container__text span{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#container  .container__text p{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-align: center;
 }
 
 /*--------------------OPINIONES-------------------*/
 
 #opiniones{  
-    grid-row: 2;
-    height: 650px;
+    height: 500px;
+    
 }
 
 #opiniones article{
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: 10% 90%;
     width: 100%;
     height: 100%;
     background-color: #3e043c;
     align-items: center;
-    justify-items: center;
+    padding: 20px 0px;
 }
 
-/*--------------------h2 titulo-------------------*/
+#opiniones .container{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    height: 100%;
+    align-items: center;
+    padding: 10px 35px;
+}
+
+/*-------------------- titulo -------------------*/
 
 #opiniones .opiniones__titulo{
     grid-column: 1/5;
     grid-row: 1;
     text-align: center;
     color: rgb(255, 255, 255);
+    font-size: 25px;
 }
 
-/*--------------------contenedor de opiniones-------------------*/
-
-
-
+/*-------------------- contenedor de opiniones -------------------*/
 
 #opiniones  .opiniones__comentarios__uno{
     grid-column: 1;
-    grid-row: 2;
     width: 95%;
     height: 90%;
     display: flex;
@@ -176,7 +295,11 @@ body{
     align-items: center;
     background-color: rgba(255, 255, 255, 5%) ;
     border-radius: 20px;
+    margin: 10px;
+    justify-self: center;
 }
+
+/*--------------- contenedor de opniones --------*/ 
 
 #opiniones  article .container__img__nombre{
     display: flex;
@@ -188,7 +311,6 @@ body{
 
 #opiniones .opiniones__comentarios__dos{
     grid-column: 2;
-    grid-row: 2;
     width: 95%;
     height: 90%;
     display: flex;
@@ -196,11 +318,12 @@ body{
     align-items: center;
     background-color: rgba(255, 255, 255, 5%) ;
     border-radius: 20px;
+    justify-self: center;
 }
+
 
 #opiniones .opiniones__comentarios__tres{
     grid-column: 3;
-    grid-row: 2;
     width: 95%;
     height: 90%;
     display: flex;
@@ -208,11 +331,11 @@ body{
     align-items: center;
     background-color: rgba(255, 255, 255, 5%) ;
     border-radius: 20px;
+    justify-self: center;
 }
 
 #opiniones .opiniones__comentarios__cuatro{
     grid-column: 4;
-    grid-row: 2;
     width: 95%;
     height: 90%;
     display: flex;
@@ -220,7 +343,14 @@ body{
     align-items: center;
     background-color: rgba(255, 255, 255, 5%) ;
     border-radius: 20px;
+    justify-self: center;
 }
+
+#opiniones .container > div:hover{
+    transform: scale(1.05);
+}
+
+/*--------- contenedor de imagen --------*/
 
 #opiniones div .container__img{
     height: 100px;
@@ -238,14 +368,18 @@ body{
     object-fit: cover;
 }
 
+/*------------ nombre -----------*/
+
 #opiniones  div span{
     color: #3e043c;
     background-color: white;
     margin: 30px 0px ;
-    font-size: 20px;
+    font-size: 18px;
     padding: 0px 10px;
     border-radius: 5px;
 }
+
+/*------------ comentario -----------*/
 
 #opiniones  div p{
     color: white;
@@ -258,29 +392,30 @@ body{
 
 
 
-/*--------------------contacto-------------------*/
+/*-------------------- CONTACTO -------------------*/
 
 #contacto{
-    grid-row: 3;
     width: 100%;
-    height: 650px;
+    padding: 30px 0px;
 }
 
-#contacto article{
-    height: 650px;
-    
-}
-
+/*-------------- titulo --------------*/
 #contacto  h2{
     text-align: center;
     color: rgb(0, 0, 0);
     margin: 20px;
+    font-size: 25px;
+    
 }
+
+/*---------- contenedor form e imagen ----------*/
 
 #contacto .contacto__formulario{
     display: flex;
     align-items: center;
 }
+
+/*---------- contenedor img ----------*/
 
 #contacto .contacto__formulario div{
     width: 50%;
@@ -292,6 +427,8 @@ body{
     width: 100%;
 }
 
+/*---------- formulario ----------*/
+
 #contacto .contacto__formulario form{
     width: 50%;
     height: 500px;
@@ -302,6 +439,8 @@ body{
     margin-right: 25px;
     background-color: #3e043c;
     border-radius: 15px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 #contacto .contacto__formulario form label{
@@ -334,20 +473,16 @@ body{
     border: none;
 }
 
-/*-------------------------MAIN CELULARES_Y_TABLETS----------------------------------------------*/
+
+/*------------------------- CELULARES_Y_TABLETS.html----------------------------------------------*/
 
 #container__items{
-    grid-row: 2/5;
-    height: 1300px;
     padding-top: 10px;
     background-color: #3e043c;
-
 }
 
 
 #container__items article{
-    width: 100%;
-    height: 1000px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -361,6 +496,9 @@ body{
     margin: 15px;
 }
 
+/*--------- contenedor producto ------*/
+
+
 #container__items .container{
     display: flex;
     width: 45%;
@@ -370,7 +508,17 @@ body{
     border-radius: 8px;
     background-color: white;
     align-items: center;
+    position: relative;
 }
+
+#container__items .container:hover{
+    transform: scale(1.009);
+}
+
+
+
+/*--------- imagen de producto ------*/
+
 
 #container__items .container .container__img {
     width: 50%;
@@ -383,6 +531,9 @@ body{
 #container__items .container .container__img img{
     height: 60%;
 }
+
+/*--------- datos de producto ------*/
+
 
 #container__items .container .container_text{
     display: flex;
@@ -415,8 +566,7 @@ body{
 /*auriculares*/
 
 #container__items__auriculares{
-    grid-row: 2/5;
-    height: 1300px;
+    padding-top: 10px;
     background-color: #3e043c;
 }
 
@@ -424,7 +574,6 @@ body{
 #container__items__auriculares article{
     padding-top: 10px;
     width: 100%;
-    height: 1000px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -449,7 +598,10 @@ body{
     border-radius: 8px;
     background-color: white;
     align-items: center;
-    
+}
+
+#container__items__auriculares article .container:hover{
+    transform: scale(1.009);
 }
 
 #container__items__auriculares .container .container__img {
@@ -488,92 +640,14 @@ body{
     font-size: 15px;
 }
 
-/*cargadores
-
-#container__items__cargadores{
-    grid-row: 4;
-    height: 650px;
-}
-
-
-#container__items__cargadores article{
-    background-color: #3e043c;
-    width: 100%;
-    height: 650px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-#container__items__cargadores h2{
-    text-align: center;
-    color: white;
-    width: 100%;
-}
-
-#container__items__cargadores article .container{
-    display: flex;
-    width: 45%;
-    height: 200px;
-    margin: 5px;
-    padding: 8px;
-    border-radius: 8px;
-    background-color: white;
-    align-items: center;
-    
-}
-
-#container__items__cargadores .container .container__img {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#container__items__cargadores .container .container__img img{
-    width: 50%;
-}
-
-#container__items__cargadores .container .container_text{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-#container__items__cargadores .container .container_text .precio{
-    font-size: 25px;
-}
-
-#container__items__cargadores .container .container_text .envio{
-    color: white;
-    background-color: #3e043c;
-    width: 100px;
-    padding: 2px;
-    margin: 7px 0px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 15px;
-}
-
-#container__items__cargadores .container .container_text .producto{
-    font-size: 15px;
-}*/
-
-
-
-
 /*-------------------------MAIN ¿COMO COMPRAR?----------------------------------------------*/
 
 #comprar{
-    grid-row: 2/5;
-    height: 1300px;
+    width: 100%;
 }
 
 #comprar article{
     padding: 10px;
-    height: 1300px;
     display: flex;
     align-items: center;
 }
@@ -592,9 +666,12 @@ body{
 
 #comprar .compras__contenedor .comprar__pasos{
     display: flex;
-    height: 210px;
+    height: 250px;
     width: 95%;
     padding: 10px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*contenedor de imagen*/
@@ -647,15 +724,12 @@ body{
 
 #inicios{
     width: 100%;
-    grid-row: 2;
-    height: 650px;
 }
 
 #inicios article{
     background-color: #3e043c;
     padding: 50px;
     width: 100%;
-    height: 650px;
 }
 
 #inicios h2{
@@ -671,8 +745,6 @@ body{
 
 
 /*que te ofrecemos*/
-
-
 
 #ofrecemos{
     height: 650px;
@@ -762,12 +834,12 @@ body{
 /*--------------------FOOTER-------------------*/
 
 #pie{
-    grid-row: 4;
+    grid-row: 2;
     background-color: #3e043c;
     display: flex;
     height: 400px;
     width: 100%;
-    padding: 10px;
+    
 }
 
 #pie .titulo{
@@ -885,771 +957,834 @@ body{
 
 @media screen and (max-width: 600px) {
 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    :root{
+        color: var(--color-principal, #3e043c);
+    }
+    
+    
     body{
         display: grid;
-        grid-template-columns: 100vw;
-        grid-template-rows: 500px 750px 750px 500px;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+    }   
+
+        /*--------------------HEADER-------------------*/
+
+    #header{
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        height: 65px;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    /*--------------------logo-------------------*/
+
+    #header  a{
+        margin-left: 15px;
+    }
+
+    /*--------------------nav-------------------*/
+
+
+    #header .header__navegacion{
+        width: 86%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    /*--------------------desplegable, solo para pantallas-------------------*/
+
+
+    #header .header__navegacion .boton__menu{
+        display: flex;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        justify-content: center;
+        margin-right: 5px;
+    }
+
+    #header .header__navegacion .boton__menu span{
+        color: white;
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+    }
+
+    #header .header__navegacion ul{
+        list-style: none;
+        display: none;
+        flex-direction: column;
+        background-color: #3e043c;
+        height: 400px;
+        width: 100%;
+        position: absolute;
+        justify-self: center;
+    }
+
+    #header .header__navegacion ul li{
+        height: 30px;
+    }
+
+    #header .header__navegacion a{
+        text-decoration: none;
+        margin: 0px 8px;
+        padding: 10px 5px;
+        color: white;
+    }
+
+    /*--------------------PORTADA (comun a todas la paginas)-------------------*/
+
+    main{
+        grid-row: 1;
+    }
+
+    #portada{
+        grid-row: 1;
+        height: 550px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #portada article{
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #portada article .portada__img{
+        object-fit: cover;
+        height: 100%;
+    }
+
+    /*--------------------contenedor de texto de portada-------------------*/
+
+
+    #portada .portada__texto{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(62, 4, 60, 70%);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #portada .portada__texto .portada__titulo{
+        font-size: 55px;
+        color: white;
+        padding: 0px 15px;
+        text-align: center;
+        width: 100%;
+        margin: 10px 0px;
+        animation-name: desplazamiento;
+        animation-duration: 1.5s;
+    }
+
+    #portada .portada__texto span{
+        font-size: 20px;
+        color: white; 
+        padding: 0px 15px;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0px;
+        animation-name: desplazamiento;
+        animation-duration: 2s;
+    }
+
+    #portada .portada__texto .portada__enlace{
+        padding: 20px;
+        color: white;
+        text-decoration: none;
+        background-color: #3e043c;
+        font-size: 20px;
+        border-radius: 15px;
+        margin: 10px 0px;
+        animation-name: desplazamiento;
+        animation-duration: 2.5s;
+    }
+
+    @keyframes desplazamiento {
+        0% {transform: translateY(1000px); color: rgb(255, 255, 255, 0%);}
+        50% {color: rgb(255, 255, 255, 0%);}
+        100% {transform: translateY(0px); color: rgb(255, 255, 255, 100%)}
+    }
+
+    /* secciones de "experiencia", "precios bajos" y "seguridad*/
+
+    #container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0px;
+    }
+    
+    #container .container__experiencia{
+        width: 85%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0px;
+    }
+    
+    #container .container__precios{
+        width: 85%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0px;
+    }
+    
+    #container .container__seguridad{
+        width: 85%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0px;
+    }
+    
+    /*-----container img-----*/
+    
+    #container .container__img{
+        height: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #container  .container__img img{
+        height: 80%;
+    
+    }
+    
+    /*-----container texto-----*/
+    
+    #container  .container__text{
+        width: 90%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #3e043c;
+        align-self: center;
+        padding: 30px;
+        border-radius: 10px;
+    }
+    
+    #container  .container__text span{
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    
+    #container  .container__text p{
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        text-align: center;
+    }
+
+        
+
+    /*--------------------OPINIONES-------------------*/
+
+    #opiniones{ 
+        width: 100%;
+        display: flex;
+        height: 600px;
+    }
+
+    #opiniones article{
+        background-color: #3e043c;
+        align-items: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #opiniones .container{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow-x: scroll;
+    }
+
+
+    /*-------------------- titulo -------------------*/
+
+    #opiniones .opiniones__titulo{
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+    }
+
+    /*-------------------- contenedor de opiniones -------------------*/
+
+    #opiniones  .opiniones__comentarios__uno{
+        width: 250px; 
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 5%) ;
+        border-radius: 20px;
+        height: 400px;
+        position: absolute;
+        margin: 0;
+    }
+
+    /*--------------- contenedor de opniones --------*/ 
+
+    #opiniones  article .container__img__nombre{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    #opiniones .opiniones__comentarios__dos{
+        width: 250px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 5%) ;
+        border-radius: 20px;
+        position: absolute;
+        transform: translateX(280px);
+        margin: 0;
+    }
+
+    #opiniones .container .opiniones__comentarios__tres{
+        width: 250px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 5%) ;
+        border-radius: 20px;
+        position: absolute;
+        transform: translateX(560px);
+        margin: 0;
+    }
+
+    #opiniones .opiniones__comentarios__cuatro{
+        width: 250px;
+        height: 400px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 5%) ;
+        border-radius: 20px;
+        position: absolute;
+        transform: translateX(840px);
+
+    }
+
+    /*--------- contenedor de imagen --------*/
+
+    #opiniones div .container__img{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    #opiniones  div .avatar{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    /*------------ nombre -----------*/
+
+    #opiniones  div span{
+        color: #3e043c;
+        background-color: white;
+        margin: 30px 10px ;
+        font-size: 20px;
+        padding: 0px 10px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    /*------------ comentario -----------*/
+
+    #opiniones  div p{
+        color: white;
+        text-align: center;
+        font-size: 15px;
+        padding: 0px 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+        /*-------------------- CONTACTO -------------------*/
+
+    #contacto{
+        width: 100%;
+    }
+
+
+    /*-------------- titulo --------------*/
+    #contacto  h2{
+        text-align: center;
+        color: rgb(0, 0, 0);
+        margin: 20px;
+        font-size: 20px;
+    }
+
+    /*---------- contenedor form e imagen ----------*/
+
+    #contacto .contacto__formulario{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*---------- contenedor img ----------*/
+
+    #contacto .contacto__formulario div{
+        display: none;
+        
+    }
+
+
+    /*---------- formulario ----------*/
+
+    #contacto .contacto__formulario form{
+        width: 95%;
+        height: 500px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 15px;
+        margin: 0%;
+        background-color: #3e043c; 
+        border-radius: 10px;
+    }
+
+    #contacto .contacto__formulario form label{
+        color: white;
+        font-size: 13px;
+    }
+
+    #contacto .contacto__formulario .entrada{
+        height: 35px;
+        padding: 0px 10px;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+    }
+
+    #contacto .contacto__formulario textarea{
+        padding: 10px 10px;
+        border-radius: 6px;
+        min-width: 100%;
+        min-height: 40%;
+        outline: none;
+        border: none;
+    }
+
+    #contacto .contacto__formulario form .form__boton{
+        height: 35px;
+        margin-top: 10px;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+    }
+
+    /*------------------------- CELULARES_Y_TABLETS.html----------------------------------------------*/
+
+    #container__items{
+        padding-top: 10px;
+        background-color: #3e043c;
+        padding: 20px 0px;
+    }
+
+
+    #container__items article{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #container__items h2{
+        text-align: center;
+        color: white;
+        width: 100%;
+        margin: 15px;
+    }
+
+    /*--------- contenedor producto ------*/
+
+
+    #container__items .container{
+        display: flex;
+        width: 90%;
+        height: 180px;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 8px;
+        background-color: white;
+        align-items: center;
+    }
+
+    /*--------- imagen de producto ------*/
+
+
+    #container__items .container .container__img {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #container__items .container .container__img img{
+        height: 60%;
+    }
+
+    /*--------- datos de producto ------*/
+
+
+    #container__items .container .container_text{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    #container__items .container .container_text .precio{
+        font-size: 25px;
+    }
+
+    #container__items .container .container_text .envio{
+        color: white;
+        background-color: #3e043c;
+        width: 100px;
+        padding: 2px;
+        margin: 7px 0px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #container__items .container .container_text .producto{
+        font-size: 15px;
+    }
+
+
+    
+    /*-------------------------MAIN ACCESORIOS----------------------------------------------*/
+
+    /*auriculares*/
+
+    #container__items__auriculares{
+        width: 100%;
+        background-color: #3e043c;
+    }
+
+
+    #container__items__auriculares article{
+        padding-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    #container__items__auricularess h2{
+        text-align: center;
+        color: white;
+        width: 100%;
+        margin: 15px;
+    }
+
+    #container__items__auriculares article .container{
+        display: flex;
+        width: 90%;
+        height: 200px;
+        margin: 5px;
+        padding: 8px;
+        border-radius: 8px;
+        background-color: white;
+        align-items: center;
     }
 
     
-/*--------------------HEADER-------------------*/
-
-#header{
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    height: 65px;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    
-}
-
-/*--------------------logo-------------------*/
-
-#header a{
-    margin-left: 25px;
-}
-
-/*--------------------nav-------------------*/
-
-
-#header .header__navegacion{
-    width: 86%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-#header .header__navegacion .boton__menu{
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-}
-
-#header .header__navegacion .boton__menu span{
-    color: white;
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-
-
-
-
-#header .header__navegacion ul{
-    list-style: none;
-    display: none;
-}
-
-#header .header__navegacion a{
-    text-decoration: none;
-    margin: 0px 8px;
-    padding: 10px 5px;
-    color: white;
-}
-
-
-    /*--------------------PORTADA-------------------*/
-
-#portada{
-    grid-row: 1;
-    height: 500px;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-#portada article .portada__img{
-    height: 100%;
-    width: auto;
-}
-
-/*--------------------contenedor de texto de portada-------------------*/
-
-
-#portada .portada__texto{
-    width: 100%;
-    height: 100%;
-    background-color: rgb(62, 4, 60, 70%);
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#portada .portada__texto .portada__titulo{
-    font-size: 50px;
-    text-align: center;
-    color: white;
-    padding: 0px 15px;
-    margin: 15px 0px 0px 0px;
-} 
-
-#portada .portada__texto span{
-    font-size: 20px;
-    color: white; 
-    padding: 0px 15px;
-    margin: 15px 0px 0px 0px;
-    text-align: center;
-}
-
-#portada .portada__texto .portada__enlace{
-    margin: 15px 0px 0px 55px;
-    padding: 20px;
-    color: white;
-    text-decoration: none;
-    background-color: #3e043c;
-    font-size: 20px;
-    border-radius: 15px;
-    margin: 15px 0px 0px 0px;
-}
-
-/*--------------------OPINIONES-------------------*/
-
-#opiniones{  
-    grid-row: 2;
-    height: 750px;
-    width: 100%;
-}
-
-#opiniones article{
-    display: grid;
-    grid-template-rows: 10% repeat(4, 22.5%);
-    width: 100%;
-    height: 750px;
-    background-color: #3e043c;
-}
-
-/*--------------------h2 titulo-------------------*/
-
-#opiniones .opiniones__titulo{
-    grid-row: 1;
-    text-align: center;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-}
-
-/*--------------------contenedor de opiniones-------------------*/
-
-
-
-
-#opiniones  .opiniones__comentarios__uno{
-    grid-row: 2;
-    grid-column: 1/5;
-    height: 90%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 5%) ;
-    border-radius: 20px;
-    margin: 0px 10px;
-}
-
-#opiniones .opiniones__comentarios__dos{
-    grid-row: 3;
-    grid-column: 1/5;
-    width: 95%;
-    height: 90%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 5%) ;
-    border-radius: 20px;
-    margin: 0px 10px;
-}
-
-#opiniones .opiniones__comentarios__tres{
-    grid-row: 4;
-    grid-column: 1/5;
-    width: 95%;
-    height: 90%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 5%) ;
-    border-radius: 20px;
-    margin: 0px 10px;
-}
-
-#opiniones .opiniones__comentarios__cuatro{
-    grid-row: 5;
-    grid-column: 1/5;
-    width: 95%;
-    height: 90%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 5%) ;
-    border-radius: 20px;
-    margin: 0px 10px;
-}
-
-#opiniones .container__img__nombre{
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#opiniones  .container__img{
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    border: 1px solid black;
-}
-
-#opiniones  div .container__img .avatar{
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-#opiniones  span{
-    color: #3e043c;
-    background-color: white;
-    text-align: center;
-    font-size: 20px;
-    padding: 0px 10px;
-    border-radius: 5px;
-    width: 100px;
-}
-
-#opiniones p{
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    
-    font-family: Arial, Helvetica, sans-serif;
-    width: 70%;
-    border: 1px solid white;
-}
-
-
-/*--------------------contacto-------------------*/
-
-#contacto{
-    grid-row: 3;
-    width: 100%;
-    height: 750px;
-}
-
-#contacto article{
-    height: 750px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#contacto  h2{
-    text-align: center;
-    color: rgb(0, 0, 0);
-    margin: 20px;
-}
-
-#contacto .contacto__formulario{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    
-}
-
-#contacto .contacto__formulario div{
-    display: none;
-    align-items: center;
-}
-
-#contacto .contacto__formulario form{
-    width: 100%;
-    height: 600px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 15px;
-    background-color: #3e043c;
-    border-radius: 15px;
-    margin: 0px 5px;
-}
-
-#contacto .contacto__formulario form label{
-    color: white;
-    font-size: 13px;
-}
-
-#contacto .contacto__formulario .entrada{
-    height: 35px;
-    padding: 0px 10px;
-    border-radius: 6px;
-    outline: none;
-    border: none;
-}
-
-#contacto .contacto__formulario textarea{
-    padding: 10px 10px;
-    border-radius: 6px;
-    min-width: 100%;
-    min-height: 40%;
-    outline: none;
-    border: none;
-}
-
-#contacto .contacto__formulario form .form__boton{
-    height: 35px;
-    margin-top: 10px;
-    border-radius: 6px;
-    outline: none;
-    border: none;
-}
-
-/*-------------------------MAIN CELULARES_Y_TABLETS----------------------------------------------*/
-
-#container__items{
-    grid-row: 2/5;
-    height: 1500px;
-    padding: 0;
-    background-color: #3e043c;
-
-}
-
-
-#container__items article{
-    width: 100%;
-    height: 1500px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    overflow-x: auto;
-}
-
-#container__items h2{
-    text-align: center;
-    color: white;
-    width: 100%;
-    margin: 15px;
-}
-
-#container__items .container{
-    display: flex;
-    width: 95%;
-    height: 140px;
-    margin: 3px;
-    padding: 5px;
-    border-radius: 8px;
-    background-color: white;
-    align-items: center;
-}
-
-#container__items .container .container__img {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#container__items .container .container__img img{
-    height: 70%;
-}
-
-#container__items .container .container_text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    height: 100%;
-}
-
-#container__items .container .container_text .precio{
-    font-size: 25px;
-}
-
-#container__items .container .container_text .envio{
-    color: white;
-    background-color: #3e043c;
-    width: 100px;
-    padding: 2px;
-    margin: 7px 0px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 15px;
-}
-
-#container__items .container .container_text .producto{
-    font-size: 15px;
-}
 
-
-/*-------------------------MAIN ACCESORIOS----------------------------------------------*/
-
-/*auriculares*/
-
-#container__items__auriculares{
-    grid-row: 2/5;
-    height: 1500px;
-    background-color: #3e043c;
-}
-
-
-#container__items__auriculares article{
-    padding-top: 10px;
-    width: 100%;
-    height: 1500px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-#container__items__auricularess h2{
-    text-align: center;
-    color: white;
-    width: 100%;
-    margin: 15px;
-}
-
-#container__items__auriculares article .container{
-    display: flex;
-    width: 95%;
-    height: 200px;
-    margin: 5px;
-    padding: 8px;
-    border-radius: 8px;
-    background-color: white;
-    align-items: center;
-}
-
-#container__items__auriculares .container .container__img {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#container__items__auriculares .container .container__img img{
-    width: 50%;
-}
-
-#container__items__auriculares .container .container_text{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-#container__items__auriculares .container .container_text .precio{
-    font-size: 25px;
-}
-
-#container__items__auriculares .container .container_text .envio{
-    color: white;
-    background-color: #3e043c;
-    width: 100px;
-    padding: 2px;
-    margin: 7px 0px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 15px;
-}
-
-#container__items__auricularess .container .container_text .producto{
-    font-size: 15px;
-}
-
-
-/*-------------------------MAIN ¿COMO COMPRAR?----------------------------------------------*/
-
-#comprar{
-    grid-row: 2/5;
-    height: 1500px;
-}
-
-#comprar article{
-    padding: 0;
-    height: 1500px;
-    display: flex;
-    align-items: center;
-}
-
-#comprar .compras__contenedor{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    height: 1500px;
-}
-
-#comprar .compras__contenedor .comprar__pasos{
-    display: flex;
-    height: 16.66%;
-    width: 100%;
-}
-
-/*contenedor de imagen*/
-
-#comprar .compras__contenedor .comprar__pasos .comprar__pasos_img{
-    display: none;
-}
-
-#comprar .compras__contenedor .comprar__pasos .comprar__pasos_img img{
-    height: 100%;
-}
-
-/*contenedor de texto*/
-
-#comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt{
-    width: 100%;
-    background-color: #3e043c;
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt .titulo{
-    color: white;
-    font-size: 20px;
-    
-}
-
-#comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt .titulo .titulo__paso{
-    font-size: 25px;
-    background-color: white;
-    color: #3e043c;
-    border-radius: 4px;
-    padding: 2px 10px;
-}
-
-#comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt .explicacion{
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-
-
-
-
-/*--------------------FOOTER-------------------*/
-
-#pie{
-    grid-row: 4;
-    background-color: #3e043c;
-    display: flex;
-    flex-direction: column;
-    height: 600px;
-    width: 100%;
-    padding: 5px;
-    border: 1px solid white;
-}
-
-#pie .titulo{
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-#pie .informacion{
-    color: white;
-    font-size: 12px;
-}
-
-/*--------------------FOOTER__IZQUIERDO-------------------*/
-
-
-#pie .pie__izquierdo{
-    width: 100%;
-    height: 40%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/*--------------------FOOTER__CENTRO-------------------*/
-
-#pie .pie__centro{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 100%;
-    height: 40%;
-    align-items: center;
-}
-
-#pie .pie__centro .pie__centro__redes{
-    height: 40%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-#pie .pie__centro .pie__centro__redes .container__redes{
-    display: flex;
-    padding-bottom: 15px;
-    
-}
-
-#pie .pie__centro .pie__centro__redes .container__redes a{
-    color: white;
-    font-size: 25px;
-    margin-right: 20px;
-}
-
-#pie .pie__centro .pie__centro__secciones{
-    height: 60%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-#pie .pie__centro .pie__centro__secciones .container__seccion{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    height: 90%;
-    margin-top: 15px;
-}
-
-#pie .pie__centro .pie__centro__secciones .container__seccion a{
-    color:  white;
-    text-decoration: none;
-    font-size: 12px;
-
-}
-
-
-/*--------------------FOOTER__DERECHO-------------------*/
-
-#pie .pie__derecho{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 100%;
-    height: 20%;
-    align-items: center;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-#pie .pie__derecho form{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-#pie .pie__derecho form input{
-    width:100%;
-    height: 25px;
-    padding: 0px 5px;
-    margin-bottom: 5px;
+    #container__items__auriculares .container .container__img {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #container__items__auriculares .container .container__img img{
+        width: 50%;
+    }
+
+    #container__items__auriculares .container .container_text{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    #container__items__auriculares .container .container_text .precio{
+        font-size: 25px;
+    }
+
+    #container__items__auriculares .container .container_text .envio{
+        color: white;
+        background-color: #3e043c;
+        width: 100px;
+        padding: 2px;
+        margin: 7px 0px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #container__items__auricularess .container .container_text .producto{
+        font-size: 15px;
+    }
+
+
+    /*-------------------------MAIN ¿COMO COMPRAR?-------------------------------------*/
+
+    #comprar{
+        width: 100%;
+    }
+
+    #comprar article{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    #comprar h2{
+        text-align: center;
+    }
+
+    #comprar .compras__contenedor{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #comprar .compras__contenedor .comprar__pasos{
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        width: 95%;
+        padding: 0%;
+    }
+
+    /*contenedor de imagen*/
+
+    #comprar .compras__contenedor .comprar__pasos .comprar__pasos_img{
+        width: 100%;
+        height: 50%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #comprar .compras__contenedor .comprar__pasos .comprar__pasos_img img{
+        height: 50%;
+    }
+
+    /*contenedor de texto*/
+
+    #comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt{
+        width: 100%;
+        height: 100%;
+        background-color: #3e043c;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    #comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt .titulo{
+        color: white;
+        font-size: 20px;
+    }
+
+    #comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt .titulo .titulo__paso{
+        font-size: 25px;
+        background-color: white;
+        color: #3e043c;
+        border-radius: 4px;
+        padding: 2px 10px;
+    }
+
+    #comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt .explicacion{
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+
+        /*--------------------FOOTER-------------------*/
+
+    #pie{
+        grid-row: 2;
+        background-color: #3e043c;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    #pie .titulo{
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    #pie .informacion{
+        color: white;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    /*--------------------FOOTER__izquierdo-------------------*/
+
+
+    #pie .pie__izquierdo{
+        width: 100%;
+        padding: 10px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /*--------------------FOOTER__CENTRO-------------------*/
+
+    #pie .pie__centro{
+        display: flex;
+        flex-direction: column;
+        padding: 5px 5px;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+
+    #pie .pie__centro .pie__centro__redes{
+        height: 40%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    #pie .pie__centro .pie__centro__redes .container__redes{
+        display: flex;
+        
+    }
+
+    #pie .pie__centro .pie__centro__redes .container__redes a{
+        color: white;
+        font-size: 30px;
+        margin-right: 20px;
+    }
+
+    #pie .pie__centro .pie__centro__secciones{
+        height: 60%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    #pie .pie__centro .pie__centro__secciones .container__seccion{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 90%;
+        margin-top: 15px;
+    }
+
+    #pie .pie__centro .pie__centro__secciones .container__seccion a{
+        color:  white;
+        text-decoration: none;
+        font-size: 12px;
+
+    }
+
+
+    /*--------------------FOOTER__IZQUIERDO-------------------*/
+
+    #pie .pie__derecho{
+        display: flex;
+        flex-direction: column;
+        padding: 5px 5px;
+        width: 100%;
+        height: 50%;
+        align-items: center;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+    }
+
+    #pie .pie__derecho form{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #pie .pie__derecho form input{
+        width: 100%;
+        height: 25px;
+        padding: 0px 5px;
+    }
+
+    #pie .pie__derecho form button{
+        width: 100%;
+        height: 25px;
+    }
 }
 
-#pie .pie__derecho form button{
-    width: 100%;
-    height: 25px;
-} 
-
-
-}
-
-
-
-@media screen and (max-width: 1023px){
-    
-    /*--------------------HEADER-------------------*/
-
-#header{
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    height: 65px;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    
-}
-
-/*--------------------logo-------------------*/
-
-#header a{
-    margin-left: 25px;
-}
-
-/*--------------------nav-------------------*/
-
-
-#header .header__navegacion{
-    width: 86%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-#header .header__navegacion .boton__menu{
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-}
-
-#header .header__navegacion .boton__menu span{
-    color: white;
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-#header .header__navegacion ul{
-    list-style: none;
-    display: none;
-}
-
-#header .header__navegacion a{
-    text-decoration: none;
-    margin: 0px 8px;
-    padding: 10px 5px;
-    color: white;
-}
-
-/* imagen como comprar*/
-
-#comprar .compras__contenedor .comprar__pasos .comprar__pasos_img img{
-    width: auto;
-}
-}
 
 
 

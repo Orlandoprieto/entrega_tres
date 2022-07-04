@@ -12,114 +12,222 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
+
+
     <header id="header">
-        
-        <a href="index.html"><img src="./images/logo.png" alt="Home" title="Home"> </a>
-        
+
+        <!-- logo-->
+        <a href="index.html">
+            <img src="./images/logo.png" alt="Home" title="Home"> 
+        </a>
+
+        <!-- nav -->
         <nav class="header__navegacion">
 
+            <!-- desplegable, solo para pantallas >  -->
             <div class="boton__menu">
-                <span><ion-icon name="chevron-down-outline"></ion-icon></span>
+                <span><ion-icon name="menu-outline"></ion-icon></span>
             </div>
 
+            <!-- Enlaces del header -->
             <ul>
-                <li><a href="./pages/celulares_y_tablets.html">Smartphones</a></li>
-                <li><a href="./pages/repuestos_y_accesorios.html">Accesorios</a></li>
-                <li><a href="./pages/como_comprar.html">¿Como comprar?</a></li>
-                <li><a href="./pages/sobre_nosotros.html">Sobre nosotros</a></li>
+                <li>
+                    <a href="./pages/celulares_y_tablets.html">Smartphones</a>
+                </li>
+
+                <li>
+                    <a href="./pages/repuestos_y_accesorios.html">Accesorios</a>
+                </li>
+
+                <li>
+                    <a href="./pages/como_comprar.html">¿Como comprar?</a>
+                </li>
+
+                <li>
+                    <a href="./pages/sobre_nosotros.html">Sobre nosotros</a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
+
+        <!-- PORTADA -->
         <section id="portada">
             <article>
+
+                <!-- imagen de fondo -->
                 <img class="portada__img" src="./images/img_index_porada.jpg" alt="">
+                
+                <!-- textos de portada -->
                 <div class="portada__texto">
                     <h1 class="portada__titulo">Celucenter</h1>
-                    <span>Veni, cambia tu celular</span>
-                    <span>Tenemos lo que estas buscando</span>
+                    <span>Veni, cambia tu celular. Tenemos lo que estas buscando.</span>
+    
                     <a class="portada__enlace" href="./pages/celulares_y_tablets.html">Ver smartphones</a>
                 </div>
             </article>
         </section>
 
-        <section id="opiniones">
+        <section id="container">
             <article>
 
-                <h2 class="opiniones__titulo">Opiniones de nuestros clientes</h2>
-        
-                <div class="opiniones__comentarios__uno">
-                    <div class="container__img__nombre">
-                        <div class="container__img">
-                            <img class="avatar" src="./images/foto_perfil_uno.jpg" alt="">
-                        </div>
-                        <span>Franco serrudo</span>
+                <div class="container__experiencia">
+
+                    <div class="container__img">
+                        <img src="./images/img_index/undraw_sharing_knowledge_03vp.png" alt="">
                     </div>
-                    <p>Muy buena atención, responsable me llegó el producto en tiempo y forma. Muy recomendable."</p>
+
+                    <div class="container__text">
+                        <span>Experiencia</span>
+                        <p>Nuestro equipo cuenta con una gran experiencia en dispositivos moviles. Podemos ayudarte a elegir ajustando a tus necesidades.</p>
+                    </div>
                 </div>
 
-                    <div class="opiniones__comentarios__dos">
-                        <div class="container__img__nombre">
-                            <div class="container__img">  
-                                <img class="avatar" src="./images/foto_perfil_dos.jpg" alt="">          
-                            </div>
-                            <span>Alejandro Calizaya</span>
-                        </div>
-                        <p>"Excelente Atención y Calidad del Servicio. 100% Recomendable."</p>
+                <div class="container__precios">
+
+                    <div class="container__img">
+                        <img src="./images/img_index/undraw_bear_market_ania.png" alt="">
                     </div>
 
-                    <div class="opiniones__comentarios__tres">
-                        <div class="container__img__nombre">
-                            <div class="container__img">
-                                <img class="avatar" src="./images/foto_perfil_tres.jpg" alt="">
-                            </div>
-                            <span>Braian Abrahan</span>
-                        </div>
-                        <p>"Primera vez que compro aca, todo perfecto en atencion y ni hablemos de celular. Volvere por unos auriculares" </p>
+                    <div class="container__text">
+                        <span>Precios bajos</span>
+                        <p>Te facilitamos te tener tu celular. Contamos con una amplia gama de marcas, los precios mas bajos de la mercado.</p>
+                    </div>
+                </div>
+
+                <div class="container__seguridad">
+
+                    <div class="container__img">
+                        <img src="./images/img_index/undraw_Security_re_a2rk.png" alt="">
                     </div>
 
-                    <div class="opiniones__comentarios__cuatro">
-                        <div class="container__img__nombre">
-                            <div class="container__img">
-                                <img class="avatar" src="./images/foto_perfil_cuatro.jpg" alt="">
-                            </div>
-                            <span>Alex cayo</span>
-                        </div>
-                        <p>"Compre para revender y la verdad que los chicos me atendieron de lujo y con mucho profeciolalismo. Son unos genios"</p>
+                    <div class="container__text">
+                        <span>Seguridad</span>
+                        <p>Realiza la compora con confianza, tu datos seran perfectamente guardados. Si por algun problema no recibis lo que compraste te devolvemos tu dinero.</p>
                     </div>
+                </div>
+                
             </article>
         </section>
 
+        <!-- OPINIONES -->
+        <section id="opiniones">
+            <article>
+
+                <!-- titulo -->
+                <h2 class="opiniones__titulo">Opiniones de nuestros clientes</h2>
+        
+                <div class="container">
+
+                <!-- contenedor de opniones N1 -->
+                    <div class="opiniones__comentarios__uno">
+                        <div class="container__img__nombre">
+
+                            <!-- contenedor imagen -->
+                            <div class="container__img">
+                                <img class="avatar" src="./images/foto_perfil_uno.jpg" alt="">
+                            </div>
+
+                            <!-- nombre -->
+                            <span>Franco serrudo</span>
+                        </div>
+
+                        <!-- comentario -->
+                        <p>Muy buena atención, responsable me llegó el producto en tiempo y forma. Muy recomendable."</p>
+                    </div>
+
+
+                    <!-- contenedor de opniones N2 -->
+                    <div class="opiniones__comentarios__dos">
+                        <div class="container__img__nombre">
+
+                            <!-- contenedor imagen -->
+                            <div class="container__img">  
+                                <img class="avatar" src="./images/foto_perfil_dos.jpg" alt="">          
+                            </div>
+
+                            <!-- nombre -->
+                            <span>Alejandro Calizaya</span>
+                        </div>
+
+                        <!-- comentario -->
+                            <p>"Excelente Atención y Calidad del Servicio. 100% Recomendable."</p>
+                    </div>
+
+                    <!-- contenedor de opniones N3 -->
+                    <div class="opiniones__comentarios__tres">
+                        <div class="container__img__nombre">
+
+                            <!-- contenedor imagen -->
+                            <div class="container__img">
+                                <img class="avatar" src="./images/foto_perfil_tres.jpg" alt="">
+                            </div>
+
+                            <!-- nombre -->
+                            <span>Braian Abrahan</span>
+                        </div>
+
+                        <!-- comentario -->
+                        <p>"Primera vez que compro aca, todo perfecto en atencion y ni hablemos de celular. Volvere por unos auriculares" </p>
+                    </div>
+
+                    <!-- contenedor de opniones N3 -->
+                    <div class="opiniones__comentarios__cuatro">
+                        <div class="container__img__nombre">
+
+                            <!-- contenedor imagen -->
+                            <div class="container__img">
+                                <img class="avatar" src="./images/foto_perfil_cuatro.jpg" alt="">
+                            </div>
+
+                            <!-- nombre -->
+                            <span>Alex cayo</span>
+                        </div>
+
+                        <!-- comentario -->
+                        <p>"Compre para revender y la verdad que los chicos me atendieron de lujo y con mucho profeciolalismo. Son unos genios"</p>
+                    </div>
+                </div>
+
+            </article>
+        </section>
+
+        <!-- CONTACTO -->
         <section id="contacto">
             <article>
 
+                <!-- titulo -->
                 <h2>Contactanos</h2>
 
-                 <div class="contacto__formulario">
-                     
-                     <div>
+                <!-- contenedor form e imagen -->
+                <div class="contacto__formulario">
+                    
+                    <!-- contenedor img -->
+                    <div>
                         <img src="./images/img_contacto.png"  alt="">
-                     </div>
+                    </div>
 
-                     <form action="">
-                         <label for="nombre-apellido">Nombre y apellido:</label>
-                         <input class="entrada" id="nombre-apellido" type="text">
+                    <form action="">
+                        <label for="nombre-apellido">Nombre y apellido:</label>
+                        <input class="entrada" id="nombre-apellido" type="text">
 
-                         <label for="email">Correo electronico:</label>
-                         <input class="entrada" id="email" type="email">
+                        <label for="email">Correo electronico:</label>
+                        <input class="entrada" id="email" type="email">
 
-                         <label for="mensaje">Tu consulta:</label>
-                         <textarea placeholder="¿Cual es tu pregunta?" name="mensaje" id="mensaje" cols="10" rows="10"></textarea>
+                        <label for="mensaje">Tu consulta:</label>
+                        <textarea placeholder="¿Cual es tu pregunta?" name="mensaje" id="mensaje" cols="10" rows="10"></textarea>
 
-                         <input class="form__boton" type="submit">
-                     </form>
+                        <input class="form__boton" type="submit">
+                    </form>
                 </div>
             </article>
         </section>
     </main>
 
     <footer id="pie">
+        
+        <!-- contenedor footer izquierdo -->
         <div class="pie__izquierdo">
             <span class="titulo">Ubicacion</span>
             <p class="informacion">Av. Laprida 1832, Lomas de Zamora, Buenos Aires.</p>
@@ -129,30 +237,57 @@
             <p class="informacion">Sabados de 9hs a 13hs</p>
         </div>
 
+        <!-- contenedor footer centro -->
         <div class="pie__centro">
             <div class="pie__centro__redes">
+
                 <span class="titulo"> Nuestras redes sociales</span>
+
                 <ul class="container__redes">
-                    <li><a href="#"> <span class="redes__icon"><ion-icon name="logo-instagram"></ion-icon></span> </a></li>
-                    <li><a href="#"> <span class="redes__icon"><ion-icon name="logo-facebook"></ion-icon></span> </a></li>
-                    <li><a href="#"> <span class="redes__icon"><ion-icon name="logo-twitter"></ion-icon></span> </a></li>
+                    <li>
+                        <a href="#"> <span class="redes__icon"><ion-icon name="logo-instagram"></ion-icon></span> </a>
+                    </li>
+
+                    <li>
+                        <a href="#"> <span class="redes__icon"><ion-icon name="logo-facebook"></ion-icon></span> </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#"> <span class="redes__icon"><ion-icon name="logo-twitter"></ion-icon></span> </a>
+                    </li>
                 </ul>
             </div>
 
             <div class="pie__centro__secciones">
+
                 <span class="titulo">Secciones</span>
+                
                 <ul class="container__seccion">
-                    <li><a href="./pages/celulares_y_tablets.html">Smartphones</a></li>
-                    <li><a href="./pages/repuestos_y_accesorios.html">Repuestos y accesorios</a></li>
-                    <li><a href="./pages/como_comprar.html">¿Como comprar?</a></li>
-                    <li><a href="./pages/sobre_nosotros.html">Sobre nosotros</a></li>
+                    <li>
+                        <a href="./pages/celulares_y_tablets.html">Smartphones</a>
+                    </li>
+
+                    <li>
+                        <a href="./pages/repuestos_y_accesorios.html">Repuestos y accesorios</a>
+                    </li>
+
+                    <li>
+                        <a href="./pages/como_comprar.html">¿Como comprar?</a>
+                    </li>
+
+                    <li>
+                        <a href="./pages/sobre_nosotros.html">Sobre nosotros</a>
+                    </li>
                 </ul>
             </div>
         </div>
 
+        <!-- contenedor footer derecho -->
         <div class="pie__derecho">
             <span class="titulo">Newsletter</span>
+
             <p class="informacion">Subscribite y se el primero en tener las mejores ofertas</p>
+            
             <form action="">
                 <input type="email">
                 <button>Suscribirse</button>
