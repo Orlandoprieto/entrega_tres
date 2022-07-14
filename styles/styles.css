@@ -267,8 +267,6 @@ main{
 }
 
 #opiniones .container{
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
     height: 100%;
     align-items: center;
     padding: 10px 35px;
@@ -702,8 +700,7 @@ main{
 
 #comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt .titulo{
     color: white;
-    font-size: 2vw;
-    
+    font-size: 2vw; 
 }
 
 #comprar .compras__contenedor .comprar__pasos .comprar__pasos_txt .titulo .titulo__paso{
@@ -888,7 +885,6 @@ main{
 #pie .pie__centro .pie__centro__redes .container__redes{
     display: flex;
     padding-bottom: 20px;
-    
 }
 
 #pie .pie__centro .pie__centro__redes .container__redes a{
@@ -919,11 +915,10 @@ main{
     color:  white;
     text-decoration: none;
     font-size: 12px;
-
 }
 
 
-/*--------------------FOOTER__IZQUIERDO-------------------*/
+/*--------------------FOOTER__derecho-------------------*/
 
 #pie .pie__derecho{
     display: flex;
