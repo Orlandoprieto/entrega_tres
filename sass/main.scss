@@ -7,13 +7,6 @@ $textos: (
     encabezados-h2: 25px,
     );
 
-    $textos_movile: (
-        titulo-portada-index: 55px, 
-        titulo-paginas: 40px,
-        parrafo: 17px,
-        encabezados-h2: 20px,
-        );
-
 * {
     margin: 0;
     padding: 0;
@@ -23,8 +16,7 @@ $textos: (
 
 body{
     display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 100%;
+    grid-template-rows: auto 400px;
 }
 
 
@@ -37,13 +29,11 @@ body{
     width: 100%;
     position: absolute;
     z-index: 2;
-    
-
 
     //logo
     .container-logo{
         width: 14%;
-    
+
         a{
             margin-left: 45px;
             width: 100%;
@@ -290,20 +280,23 @@ main{
         padding: 20px 0px;
 
         .opiniones__titulo{
+            grid-column: 1/5;
+            grid-row: 1;
             text-align: center;
             color: rgb(255, 255, 255);
             font-size: map-get($textos , encabezados-h2 );
         }
 
         .container{
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
             height: 90%;
             width: 100%;
             align-items: center;
-            padding: 10px 15px;
+            padding: 10px 35px;
             }
 
-            .opiniones_desktop{
+            .opiniones{
                 width: 95%;
                 height: 90%;
                 display: flex;
@@ -311,26 +304,33 @@ main{
                 align-items: center;
                 background-color: rgba(255, 255, 255, 5%) ;
                 border-radius: 20px;
-                margin: 15px;
+                margin: 10px;
                 justify-self: center;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+
+                &:hover{
+                    transform: scale(1.05);
+                }
             }
 
             //contenedor de opiniones
             .opiniones__comentarios__uno{
-                @extend .opiniones_desktop;
+                @extend .opiniones;
+                grid-column: 1;
             }
 
             .opiniones__comentarios__dos{
-                @extend .opiniones_desktop;
+                @extend .opiniones;
+                grid-column: 2;
             }
 
             .opiniones__comentarios__tres{
-                @extend .opiniones_desktop;
+                @extend .opiniones;
+                grid-column: 3;
             }
 
             .opiniones__comentarios__cuatro{
-                @extend .opiniones_desktop;
+                @extend .opiniones;
+                grid-column: 4;
             }
 
             //contenedor de avatar y nombre
@@ -569,7 +569,7 @@ main{
                 margin: 20px 0px;
                 border-radius: 10px;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                
+               
                 //contenedor de imagen
                 .comprar__pasos_img{
                     width: 40%;
@@ -613,12 +613,13 @@ main{
                 }
             }
         }
+        
     }
 }
 
 //-------------------------SOBRE NOSOTROS--------------------//
 
-#descripcion_de_empresa{
+#inicios{
     width: 100%;
     display: flex;
     align-items: center;
@@ -652,58 +653,6 @@ main{
 
     .que_te_ofrecemos{
         @extend .styles-container;
-
-        .container{
-            display: flex;
-            height: 320px;
-            width: 100%;
-
-            .container__container{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                width: 33.33%;
-                border: 1px solid white;
-                margin: 5px;
-                padding: 10px;
-                background-color: $color_principal;
-                border-radius: 10px;
-
-
-                .container_img{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 50%;
-                    width: 100%;
-
-                    img{
-                        height: 60%;
-                    }
-                }
-
-                .container__txt{
-                    width: 100%;
-                    height: 50%;
-                    
-
-                    .titulo{
-                        color: white;
-                        font-size: 20px;
-                    }
-
-                    .parrafo{
-                        color: white;
-                        font-size: 15px;
-                        text-align: center;
-                    }
-                }
-            }
-            
-            
-
-        }
     }
 
 }
@@ -718,7 +667,7 @@ main{
     height: 400px;
     width: 100%;
     
-    .pie-style_deskto{
+    .pie-style{
         width: 33.33%;
         height: 100%;
         padding: 40px 20px;
@@ -743,12 +692,12 @@ main{
 
     //contenedor footer izquierdo
     .pie__izquierdo{
-        @extend .pie-style_deskto;
+        @extend .pie-style;
     }
 
     //contenedor footer centro
     .pie__centro{
-        @extend .pie-style_deskto;
+        @extend .pie-style;
 
         //contenedor footer centro redes
         .pie__centro__redes{
@@ -811,7 +760,7 @@ main{
     }
 
     .pie__derecho{
-        @extend .pie-style_deskto;
+        @extend .pie-style;
 
         form{
             display: flex;
